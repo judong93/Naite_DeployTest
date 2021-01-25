@@ -1,7 +1,7 @@
 <template>
   <div id="Firstpage">
     <span></span>
-    <button class="firstpage-to-login"> start</button>
+    <button @click="goToProfile" class="firstpage-to-login"> start</button>
 
 
 
@@ -19,6 +19,9 @@ export default {
         }
     },
     methods:{
+      goToProfile: function () {
+        this.$router.push({ name: 'Profile'})
+      }
     },
     computed: {
 
